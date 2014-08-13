@@ -1,22 +1,22 @@
-# Bootstrap Wysihtml5 for Rails
+# Bootstrap wysihtml5 for Rails
 
 [![Gem Version](https://badge.fury.io/rb/bootstrap-wysihtml5-rails.png)](http://badge.fury.io/rb/bootstrap-wysihtml5-rails)
 
 [![endorse](https://api.coderwall.com/nerian/endorsecount.png)](https://coderwall.com/nerian)
 
-Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.
-It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
+[Bootstrap](http://getbootstrap.com) is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.
 
 http://twitter.github.com/bootstrap/
 
-Bootstrap Wysihtml5 is a plugin for Bootstrap designed by James Hollingworth. It provides a stylish wysiwyg editor for Bootstrap.
+Bootstrap Wysihtml5 is a plugin for Bootstrap designed by James Hollingworth. It provides a stylish wysiwyg editor for Bootstrap. We use Christian Sterzl's fork.
 
-https://github.com/jhollingworth/bootstrap-wysihtml5
+https://github.com/Waxolunist/bootstrap3-wysihtml5-bower
 
 bootstrap-wysihtml5-rails project integrates it with Rails 3 assets pipeline.
 
 https://github.com/Nerian/bootstrap-wysihtml5-rails
 
+__Latest version with Bootstrap 2 support was `0.3.1.24`. New releases only package Bootstrap 3 support.__
 
 ## Rails > 3.1
 Include bootstrap-wysihtml5-rails in Gemfile;
@@ -28,31 +28,24 @@ gem 'bootstrap-wysihtml5-rails'
 or you can install from latest build;
 
 ``` ruby
-gem 'bootstrap-wysihtml5-rails', :require => 'bootstrap-wysihtml5-rails',
-                              :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
+gem 'bootstrap-wysihtml5-rails', :git => 'git://github.com/Nerian/bootstrap-wysihtml5-rails.git'
 ```
+and run `bundle install`.
 
-and run bundle install.
-
-This gem doesn't include Bootstrap. You can get Bootstrap here: https://github.com/anjlab/bootstrap-rails
+This gem doesn't include Bootstrap. You can get Bootstrap here: https://github.com/twbs/bootstrap-sass
 
 ## Configuration
 
-Bootstrap-wysihtml5 depends on jquery and bootstrap.
+Bootstrap-wysihtml5 depends on bootstrap and jQuery.
 
 app/assets/stylesheets/application.css
 ``` css
 *= require bootstrap-wysihtml5
-// or
-*= require bootstrap-wysihtml5/b3
 ```
 
 app/assets/javascripts/application.js
 ```javascript
 //= require bootstrap-wysihtml5
-// or
-//= require bootstrap-wysihtml5/b3
-
 
 You may include all locales like this:
 
@@ -85,8 +78,6 @@ Just call wysihtml5() with any selector.
 
 ```
 
-A live example:  http://jsfiddle.net/5UUrg/
-
 ## If using Turbolinks
 
 ```
@@ -96,7 +87,7 @@ $(document).on('page:load', function(){
 ```
 
 ## License
-Copyright (c) 2012-2013 Gonzalo Rodríguez-Baltanás Díaz
+Copyright (c) 2012-2014 Gonzalo Rodríguez-Baltanás Díaz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
